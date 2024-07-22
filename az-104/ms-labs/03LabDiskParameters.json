@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "diskName": {
+      "value": "Disk2"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "sku": {
+      "value": "Standard_LRS"
+    },
+    "diskSizeGb": {
+      "value": 32
+    },
+    "sourceResourceId": {
+      "value": ""
+    },
+    "hyperVGeneration": {
+      "value": ""
+    },
+    "diskEncryptionSetType": {
+      "value": "EncryptionAtRestWithPlatformKey"
+    },
+    "createOption": {
+      "value": "empty"
+    },
+    "dataAccessAuthMode": {
+      "value": "None"
+    },
+    "networkAccessPolicy": {
+      "value": "AllowAll"
+    },
+    "publicNetworkAccess": {
+      "value": "Enabled"
+    }
+  }
+}
