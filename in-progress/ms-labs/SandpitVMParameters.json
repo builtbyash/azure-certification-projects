@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "networkInterfaceName": {
+      "value": "BackEndVM-nic"
+    },
+    "networkSecurityGroupName": {
+      "value": "BackEndVM-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": []
+    },
+    "subnetName": {
+      "value": "backend"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/8c9c71c8-9e64-42e0-a09e-c0da88d0ca91/resourceGroups/udemy/providers/Microsoft.Network/virtualNetworks/azvnet"
+    },
+    "publicIpAddressName": {
+      "value": "BackEndVM-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "pipDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineName": {
+      "value": "BackEndVM"
+    },
+    "virtualMachineComputerName": {
+      "value": "BackEndVM"
+    },
+    "virtualMachineRG": {
+      "value": "udemy"
+    },
+    "osDiskType": {
+      "value": "Standard_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B2s"
+    },
+    "nicDeleteOption": {
+      "value": "Delete"
+    },
+    "hibernationEnabled": {
+      "value": false
+    },
+    "adminUsername": {
+      "value": "ash"
+    },
+    "adminPassword": {
+      "value": "FFL0$I6$6tDRGw4y7n$WyEKpCfUfRqj3!t7W2Fvn9K"
+    },
+    "patchMode": {
+      "value": "AutomaticByOS"
+    },
+    "enableHotpatching": {
+      "value": false
+    },
+    "securityType": {
+      "value": "TrustedLaunch"
+    },
+    "secureBoot": {
+      "value": true
+    },
+    "vTPM": {
+      "value": true
+    }
+  }
+}

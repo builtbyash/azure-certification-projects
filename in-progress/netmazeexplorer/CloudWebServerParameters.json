@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westus2"
+    },
+    "networkInterfaceName": {
+      "value": "cloud-web-vm-nic"
+    },
+    "networkSecurityGroupName": {
+      "value": "cloud-web-vm-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "SSH",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "22"
+          }
+        },
+        {
+          "name": "HTTP",
+          "properties": {
+            "priority": 200,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "80"
+          }
+        }
+      ]
+    },
+    "subnetName": {
+      "value": "cloud-web-subnet"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/8c9c71c8-9e64-42e0-a09e-c0da88d0ca91/resourceGroups/netmazeexplorer-cloud-rg/providers/Microsoft.Network/virtualNetworks/cloud-vnet"
+    },
+    "publicIpAddressName": {
+      "value": "cloud-web-vm-publicip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "pipDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineName": {
+      "value": "cloud-web-vm"
+    },
+    "virtualMachineComputerName": {
+      "value": "cloud-web-vm"
+    },
+    "virtualMachineRG": {
+      "value": "netmazeexplorer-rg"
+    },
+    "osDiskType": {
+      "value": "StandardSSD_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B1ls"
+    },
+    "nicDeleteOption": {
+      "value": "Delete"
+    },
+    "hibernationEnabled": {
+      "value": false
+    },
+    "adminUsername": {
+      "value": "ash"
+    },
+    "adminPassword": {
+      "value": "^C$vF7lcYwQsJtaSEpVznV&7UJUYM*t6YmWR1$s2Zha"
+    },
+    "securityType": {
+      "value": "TrustedLaunch"
+    },
+    "secureBoot": {
+      "value": true
+    },
+    "vTPM": {
+      "value": true
+    }
+  }
+}
